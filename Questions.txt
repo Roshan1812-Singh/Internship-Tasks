@@ -1,0 +1,588 @@
+=> HTML:
+
+1) What is HTML?
+Ans) HTML, or HyperText Markup Language, is the standard markup language for creating web pages and web applications. It uses a system of elements and tags to structure content like text, images, links, and multimedia, defining how these components should be organized and displayed by web browsers.
+
+2) What is the difference between HTML and HTML5?
+Ans) HTML (HyperText Markup Language) is the foundational markup language for creating web pages, while HTML5 is the latest and most advanced version of HTML, introducing significant enhancements and new features.
+
+3) Explain semantic elements in HTML with examples.
+Ans) Semantic elements in HTML are elements that clearly describe their meaning and purpose to both the browser and the developer. They provide structural meaning to the content, rather than just dictating its presentation. This contrasts with non-semantic elements like <div> and <span>, which are generic containers and offer no inherent meaning about the content they hold.
+
+4) What are attributes in HTML? Provide examples.
+Ans) HTML attributes provide additional information about HTML elements, modifying their behavior or appearance. They are always specified within the opening tag of an element and typically consist of a name/value pair, separated by an equals sign, like name="value". 
+
+5) Difference between block-level and inline elements.
+Ans) (i) Block-level Elements:
+	New Line: Always start on a new line and force subsequent elements onto a new line.
+	Full Width: By default, they take up the full available width of their parent container.
+	Box Model Properties: Can have their width, height, margin (top, bottom, left, right), and padding (top, bottom, left, right) explicitly set.
+	Content Container: Often used to structure content and can contain other block-level and inline elements.
+	Examples: <div>, <p>, <h1> to <h6>, <ul>, <ol>, <li>, <header>, <footer>, <section>. 
+
+    (ii) Inline Elements:
+	No New Line: Do not start on a new line and flow within the current line of content.
+	Content Width: Only take up as much horizontal space as necessary to contain their content. 
+	Limited Box Model Properties: width and height properties are generally ignored. Only horizontal margin and padding are respected (top and bottom margins/padding are often ignored or behave inconsistently).
+	Text-level Semantics: Primarily used for formatting or styling specific parts of text or adding inline elements like links or images within text.
+	Examples: <span>, <a>, <strong>, <em>, <img>, <br>.
+
+6) Difference between id and class attributes in HTML.
+Ans) The id and class attributes in HTML serve different purposes in identifying and styling elements:
+	Uniqueness:
+		id: The id attribute is designed to uniquely identify a single element within an HTML document. Each id value must be distinct across the entire page.
+		class: The class attribute can be applied to multiple elements, allowing for the grouping of elements that share common characteristics or styles.
+	Usage:
+		id: Primarily used for targeting a specific element for styling (with higher specificity in CSS), for JavaScript manipulation, or as a target for "jump 			links" within a page.
+		class: Commonly used to apply the same styles or behaviors to a group of elements, making it efficient for consistent styling across multiple 				components
+
+7) Explain attributes and properties?
+Ans) Definition: Attributes are in HTML; properties are in the DOM.
+	Purpose: Attributes set initial values; properties reflect the current state.
+	Mutability: Attribute values often remain constant after initialization; property values can change.
+	Data Types: Attributes are strings; properties can be various data types.
+	Access: Attributes use getAttribute()/setAttribute(); properties use direct dot notation.
+
+8) What is the difference between an element and a tag?
+Ans) Tags are the syntax used to mark up the content. Whereas Elements are the actual components that make up the content of a web page, defined by the tags and their enclosed content.
+	
+	Eg: In <p>This is a paragraph.</p>, <p> is the opening tag, </p> is the closing tag, and the entire structure, including the tags and the text "This is a paragraph.", forms the paragraph element.
+
+9) How do you create links and embed images in HTML?
+Ans) The HTML <img> tag is used to embed an image in a web page. Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image. The <img> tag is empty, it contains attributes only, and does not have a closing tag.
+
+10) What is responsive web design in the context of HTML?
+Ans) Responsive web design, in the context of HTML, refers to an approach that ensures web pages automatically adjust and display optimally across various devices and screen sizes, including desktops, tablets, and mobile phones. The goal is to provide a consistent and user-friendly experience regardless of the viewing environment.
+
+11) What is the purpose of the <noscript> tag in HTML?
+Ans) The purpose of the <noscript> tag in HTML is to provide alternative content for users whose browsers do not support client-side scripting (like JavaScript) or have scripting disabled.
+
+12) How do you create a multi-line text input in an HTML form?
+Ans) A multi-line text input in an HTML form is created using the <textarea> element. This element differs from the <input type="text"> element, which is designed for single-line text input.
+
+13) What is the purpose of the rel attribute in a <link> tag?
+Ans) The rel attribute in an HTML <link> tag specifies the relationship between the current document and the linked resource. It informs browsers and search engines about the purpose of the linked file, enabling them to handle it appropriately. 
+
+14) How can you make an HTML element editable in the browser?
+Ans) An HTML element can be made editable directly in the browser by using the contenteditable global attribute.
+
+15) What is the purpose of the <datalist> tag in HTML?
+Ans) The primary purpose of the <datalist> tag in HTML is to provide a list of predefined options as suggestions for an <input> element. This creates an "autocomplete" or "autosuggest" feature for form fields, enhancing user experience and improving data entry efficiency.
+
+
+
+=> CSS: 
+
+1) Difference between inline, internal, and external CSS.
+Ans) Inline CSS:
+	Location: Applied directly within an HTML element's style attribute.
+	Scope: Affects only the specific HTML element to which it is applied.
+	Use Case: Useful for quick, one-off styling changes to a single element.
+
+     Internal (or Embedded) CSS:
+	Location: Defined within a <style> tag placed in the <head> section of an HTML document. 
+	Scope: Applies to the entire HTML document in which it is defined.
+	Use Case: Suitable for styling a single HTML page or when styles are specific to that page and not intended for reuse across multiple pages.
+     External CSS:
+	Location: Contained in a separate .css file and linked to the HTML document using the <link> tag in the <head> 	section.
+	Scope: Can be linked to multiple HTML documents, allowing for consistent styling across an entire website. 
+	Use Case: The preferred method for larger websites as it promotes separation of concerns (HTML for structure, CSS for presentation), improves maintainability, 	and allows for global styling changes from a single file.
+
+
+2) Explain the CSS Box Model.
+Ans) The CSS Box Model is a fundamental concept in web development that describes how HTML elements are rendered as rectangular boxes by the browser's rendering engine. Each element is treated as a box, and this box is composed of four distinct areas, or layers, that determine its overall size and spacing.
+
+3) What are pseudo-classes and pseudo-elements in CSS?
+Ans) Pseudo-classes:
+	Pseudo-classes target an element when it is in a particular state or condition, as if a class for that state were applied to the element. They are denoted by a single colon (:). 
+
+     Pseudo-elements
+	Pseudo-elements allow you to style specific parts of an element or to insert content before or after an element, acting as if you had added a new, virtual element to the DOM. They are denoted by a double colon (::).
+
+4) Difference between relative, absolute, fixed, and sticky positioning.
+Ans) position: static; (Default):
+		This is the default positioning for all HTML elements. Elements are rendered in the normal document flow, one after another, as defined by the HTML 		structure. top, bottom, left, and right properties have no effect on static elements.
+
+     position: relative;:
+		The element is positioned relative to its normal position in the document flow. 
+		It remains in the document flow, meaning other elements will still respect its original space. 
+		top, bottom, left, and right properties can be used to offset the element from its normal position.
+
+     position: absolute;:
+		The element is removed from the normal document flow. Its space is no longer reserved, and other elements will behave as if it's not there.
+		It is positioned relative to its nearest positioned ancestor (an ancestor with position set to relative, absolute, fixed, or sticky). If no such 		ancestor exists, it's positioned relative to the initial containing block (usually the <html> element).
+		top, bottom, left, and right properties define its position relative to this positioned ancestor.
+
+     position: fixed;:
+		The element is removed from the normal document flow.
+		It is positioned relative to the viewport (the browser window), not to any parent element.
+		It remains in the same position even when the page is scrolled. 
+		top, bottom, left, and right properties define its position relative to the viewport.
+
+     position: sticky;:
+		This is a hybrid of relative and fixed positioning.
+		Initially, it behaves like position: relative;, staying in the normal document flow.
+		When the user scrolls and the element reaches a specified offset threshold (e.g., top: 0;), it then behaves like position: fixed;, "sticking" to that 		position in the viewport until its containing block is no longer visible.
+		It requires a top, bottom, left, or right property to define the point at which it becomes "sticky."
+
+5) How do CSS Grid and Flexbox differ?
+Ans) Flexbox: is for distributing and aligning content within a line.
+     CSS Grid: is for structuring the overall layout of a page or a section by defining a grid of rows and columns
+
+6) What are CSS variables?
+Ans) CSS variables, also known as custom properties or cascading variables, are user-defined entities in CSS that store specific values to be reused throughout a document. They offer a way to define a value once and then reference it in multiple places, improving code readability, maintainability, and enabling dynamic styling. 
+
+7) Explain the concept of responsive design and media queries.
+Ans) Responsive design is an approach to web design that ensures a website's layout and content adapt seamlessly to various screen sizes and devices, providing an optimal viewing experience for users regardless of whether they are on a desktop, tablet, or smartphone. This adaptation involves flexible grids, layouts, and images, allowing elements to resize and rearrange themselves based on the available screen space.
+
+					Media queries are a fundamental component of responsive design, enabling this adaptation through CSS. They are a powerful tool that allows developers to apply specific CSS rules based on various characteristics of the device or viewpor
+
+8) What are CSS Selectors?
+Ans) CSS selectors are patterns used in Cascading Style Sheets (CSS) to "find" or select the HTML elements on a web page that you want to style. They are a fundamental part of CSS, allowing developers to apply specific styles to individual elements or groups of elements based on various criteria.
+
+9) What are the different CSS link states?
+Ans) :link:
+	This pseudo-class represents a normal, unvisited link. It defines the default style for a hyperlink that the user has not yet clicked.
+
+     :visited:
+	This pseudo-class represents a link that the user has already visited. It allows you to style links differently once they have been clicked, providing a visual cue to the user.
+
+     :hover:
+	This pseudo-class represents a link when the user's mouse pointer is hovering over it. It is commonly used to provide visual feedback and indicate interactivity, such as changing the color or adding an underline.
+
+     :active:
+	This pseudo-class represents a link while it is being activated by the user, typically when it is being clicked or pressed. It provides immediate visual feedback during the click action.
+
+     :focus:
+	pseudo-class can be used to style a link when it receives focus, such as when a user navigates to it using the Tab key.
+
+10) What is the difference between display: none and visibility: hidden?
+Ans) display: none: 
+	This property completely removes the element from the document flow. The browser renders the page as if the element does not exist. This means it will not occupy any space, and other elements will reflow to fill the vacant 	area.
+
+     visibility: hidden: 
+	This property hides the element visually, but it still occupies its allocated space in the document flow. The element remains in the layout, and other elements will not reflow to fill its space. It's as if the element is 	transparent.
+
+11) Difference between em, rem, %, and px units in CSS.
+Ans) px (Pixels):
+	This is an absolute unit. A pixel represents a fixed-size dot on a display. While historically tied to physical screen pixels, with high-density displays, 1px 	in CSS often corresponds to multiple physical pixels, maintaining visual consistency across devices.
+
+     em (Relative to Parent's Font Size):
+	This is a relative unit. An em value is relative to the font-size of its parent element. For example, if a parent element has a font-size of 16px, then 1em 	within that parent's children will equal 16px.
+
+     rem (Relative to Root Element's Font Size):
+	This is a relative unit. A rem value is relative to the font-size of the root <html> element. This provides a consistent base for scaling across the entire 	document, regardless of nested parent elements' font sizes.
+
+     % (Percentage):
+	This is a relative unit. The interpretation of % depends on the property it's applied to. For font-size, it's 	relative to the parent element's font-size. For 	widths, heights, margins, and padding, it's typically relative to the parent element's corresponding dimension.
+
+
+12) Explain the difference between relative, static, and inherit in CSS positioning?
+Ans) position: static;:
+	This is the default value for all HTML elements. A static element is positioned according to the normal document flow. Properties like top, right, bottom, and 	left have no effect on static elements. They simply occupy their natural place in the layout. 
+
+     position: relative;:
+	A relative element is also positioned according to the normal document flow initially. However, unlike static, you can then use top, right, bottom, and left 	properties to offset its final position relative to its original, static position. This offset does not affect the position of other elements; the space the 	relative element would 	normally occupy remains reserved in the document flow.
+ 
+     position: inherit;:
+	This keyword specifies that the element should inherit the computed value of its parent element's position property. If the parent has position: relative;, the 	child will also be relative. If the parent has position: static;, the child will be static.
+
+13) What is the difference between CSS transitions and animations?
+Ans) Transitions: 
+	Require a specific trigger, such as a :hover pseudo-class, :focus state, or a JavaScript-driven style change. They react to changes in an element's state.
+	By default, transitions run only once when triggered.
+
+     Animations: 
+	Can run automatically upon page load or be initiated and controlled via JavaScript. They do not inherently require a specific event to begin.
+	Can be easily configured to loop a specified number of times or infinitely using the animation-iteration-count 	property.
+
+13) Explain CSS specificity and the order of precedence.
+Ans) CSS specificity is the method browsers use to decide which CSS rules apply to an element when multiple styles conflict. Specificity assigns a "weight" or score to a selector, with higher scores winning in a conflict. When two rules have the same specificity, the one appearing later in the stylesheet takes precedence. The overall order of precedence considers the importance of a style (especially with !important), its source (e.g., inline styles vs. stylesheets), its specificity, and its position in the code. 
+
+14) How does z-index work in CSS? 
+Ans) The z-index property in CSS controls the stacking order of positioned elements along the z-axis, which is the axis perpendicular to the screen. It determines which elements appear in front of or behind other elements when they overlap
+
+15) What are CSS Combinators?
+Ans) CSS combinators are symbols or characters used in CSS selectors to define the relationship between multiple selectors, allowing for more precise targeting of elements within an HTML document. They enable the selection of elements based on their position or hierarchy relative to other elements.
+
+16) What is a stacking context?
+Ans) A stacking context in CSS is a three-dimensional conceptualization of how HTML elements are stacked or layered on top of each other along an imaginary z-axis (depth) within a webpage. It dictates the visual order of overlapping content. 
+
+17) What is CSS flexbox?
+Ans) CSS Flexbox, short for Flexible Box Layout, is a one-dimensional CSS layout module designed for arranging items within a container. It provides an efficient way to align and distribute space among items, making it easier to create flexible and responsive web layouts, particularly for user interfaces.
+
+18) What is @keframes used for?
+Ans) The @keyframes CSS at-rule defines a set of CSS styles for a specific animation sequence, allowing you to control the intermediate steps (keyframes or waypoints) of an animation. By gradually changing CSS properties over time, @keyframes enables more complex and controlled animations than CSS transitions, giving you the ability to create detailed motion, fading effects, color changes, and more. 
+
+19) What is !important?
+Ans) In CSS, !important is a keyword used to give a specific style declaration the highest possible priority, overriding all other conflicting declarations for that particular property on a given element.
+
+
+
+=> JavaScript: 
+
+1) Difference between var, let, and const.
+Ans) var: 
+	Function-scoped or globally-scoped. This means a var declared inside a function is only accessible within that 	function. If declared outside any function, 	it's globally accessible.
+	Avoid using var in modern JavaScript development due to its less predictable scoping and hoisting behavior, which can lead to unexpected bugs.
+
+     let and const: 
+	Block-scoped. This means they are limited to the block (e.g., if statements, for loops, or any code within curly braces {}) in which they are defined.
+	Use let for variables whose values are expected to change.
+	Use const for variables whose values are not expected to change throughout the program's execution.
+	let and const offer more control and help write more robust and maintainable code.
+ 
+2) What is hoisting in JavaScript?
+Ans) Hoisting in JavaScript is a behavior where declarations of variables and functions are conceptually moved to the top of their containing scope during the compilation phase, before the code is executed. This means that you can use variables and call functions before their actual declaration appears in the code. 
+
+3) Explain the concept of closures.
+Ans) A closure is a function that "remembers" the environment in which it was created, specifically the variables from its lexical scope, even after that outer scope has finished executing. This means an inner function, defined within an outer function, retains access to the outer function's variables and parameters.
+
+4) Difference between synchronous and asynchronous JavaScript.
+Ans) Synchronous JavaScript:
+
+	Sequential Execution: Tasks are executed one after another in the order they appear in the code.
+	Blocking Behavior: Each operation must complete before the next one can begin. If a task is time-consuming (e.g., reading a large file or making a network 	request), it will block the entire execution thread, making the application unresponsive.
+	Simplicity: Easier to understand and debug due to the predictable, linear flow.
+
+
+      Asynchronous JavaScript:
+
+	Non-blocking Execution: Tasks can be initiated and run in the background without blocking the main execution thread. The program can continue processing other 	tasks while waiting for the asynchronous operation to complete.
+	Event-Driven: Relies on mechanisms like callbacks, Promises, and async/await to handle the results of operations once they are available.
+	Responsiveness: Keeps the application responsive, especially in scenarios involving I/O operations (network requests, file system access) or user interface 	interactions.
+	Complexity: Can be more challenging to manage and debug due to the non-linear flow and the need to handle asynchronous patterns.
+
+5) What is the event loop in JavaScript? 
+Ans) The Event Loop in JavaScript is a fundamental mechanism that enables asynchronous operations and non-blocking I/O, despite JavaScript's single-threaded nature. It manages the execution of code, handles events, and processes queued tasks, ensuring that the main thread remains responsive.
+
+6) How does event loop in JavaScript work?
+Ans) The JavaScript event loop is a crucial mechanism that enables JavaScript, despite being single-threaded, to handle asynchronous operations without blocking the main thread. It works by continuously monitoring the call stack and the task queues. 
+
+7) Explain promises? 
+Ans) A Promise in programming, particularly in JavaScript, is an object representing the eventual completion or failure of an asynchronous operation and its resulting value. It acts as a placeholder for a value that might not be available yet but will be at some point in the future.
+
+8) Explain async/await in JavaScript.
+Ans) async keyword:
+	Placing async before a function declaration (e.g., async function fetchData() { ... }) designates it as an asynchronous function.
+	An async function always implicitly returns a Promise. If the function returns a non-Promise value, it is automatically wrapped in a resolved Promise. If it 	throws an error, it returns a rejected Promise.
+
+    await keyword:
+	The await keyword can only be used inside an async function. 
+	When await is placed before an expression that returns a Promise (e.g., await somePromise()), it pauses the execution of the async function until that Promise 	settles (either resolves or rejects).
+	If the Promise resolves, await returns its resolved value, and the async function resumes execution from that point.
+	If the Promise rejects, await throws the rejected value (error), which can then be caught using a try...catch block within the async function.
+
+9) Explain the concept of try-catch block.
+Ans) The try-catch block is a fundamental construct used in many programming languages for exception handling. It provides a structured way to manage errors and unexpected events that may occur during program execution, preventing abrupt program termination and allowing for graceful recovery or alternative actions.
+
+
+10) What is the difference between == and ===?
+Ans) Use == to check if two values are equal, even if they have different types (use with caution, as this can lead to unexpected results). 
+     Use === to check if two values are equal and have the same type, which is generally a safer and more reliable comparison. 
+
+11) What is prototypal inheritance in JavaScript?
+Ans) Prototypal inheritance is a core mechanism in JavaScript where objects inherit properties and methods directly from other objects. Unlike class-based inheritance found in many other object-oriented languages, JavaScript's inheritance model is prototype-based. 
+
+12) Explain the concept of this keyword in JavaScript.
+Ans)  The 'this keyword' in JavaScript refers to the object to which it belongs. Its value is determined by how a function is called, making it a dynamic reference.
+
+13) Difference between call, apply, and bind methods.
+Ans) The call, apply, and bind methods in JavaScript are all used to set the this context within a function and to pass arguments to that function. The key differences lie in how arguments are passed and whether the function is invoked immediately or a new function is returned.
+
+     1. call():
+	Invocation: Immediately invokes the function.
+	Argument Passing: Accepts arguments individually, separated by commas, after the this context.
+
+     2. apply():
+	Invocation: Immediately invokes the function.
+	Argument Passing: Accepts arguments as an array or an array-like object, after the this context.
+
+     3. bind():
+	Invocation: Does not immediately invoke the function. Instead, it returns a new function with the this context permanently bound and any initial arguments pre-	filled.
+	Argument Passing: Accepts arguments individually, separated by commas, after the this context, similar to call(). These arguments are pre-filled and become the 	leading arguments when the returned function is later called.
+
+14) How does debouncing and throttling work in JavaScript?
+Ans) Debouncing ensures that a function is only executed after a specified period of inactivity following the last trigger of the event. If the event is triggered again within that period, the timer is reset, and the function execution is delayed further.
+
+				Throttling limits the rate at which a function can be executed, ensuring it runs at most once within a specified time interval, regardless of how many times the event is triggered.
+
+15) What are JavaScript modules?
+Ans) JavaScript modules are a feature that allows developers to organize and structure their code into smaller, reusable, and self-contained units. They enable the division of large programs into manageable, independent files, each focused on a specific task or set of related functionalities.
+
+16) Explain the concept of react-router and react-router-dom?
+Ans) React Router is a powerful library for declarative routing within React applications. It enables the creation of single-page applications (SPAs) where navigation between different views or components occurs without full page reloads, providing a smoother user experience. 
+
+react-router is the core library containing the fundamental routing logic, including route-matching algorithms and hooks. It provides the foundational components and APIs for defining and managing routes, irrespective of the platform (web or native). 
+
+react-router-dom is a package built on top of react-router specifically designed for web applications running in a browser environment. It extends the core react-router functionality with DOM-specific components and features, such as:
+
+17) Difference between slice() and splice()?
+Ans) slice():
+	Purpose:
+		Extracts a portion of an array and returns a new array containing the extracted elements. 
+		Effect on Original Array:
+		Does not modify the original array. It creates a shallow copy of the selected elements.
+	Parameters:
+		start (optional): The index at which to begin extraction. If negative, it counts from the end of the array. 
+		end (optional): The index before which to end extraction (the element at end is not included). If negative, it counts from the end of the array. 
+
+     splice():
+	Purpose: 
+		Changes the contents of an array by removing or replacing existing elements, and/or adding new elements in place.
+		Effect on Original Array: Modifies the original array directly.
+	Parameters:
+		start: The index at which to start changing the array.
+		deleteCount (optional): The number of elements to remove from the array starting from start.
+			item1, item2, ... (optional): The elements to add to the array, starting from start. 
+
+18) What do you mean by Higher-Order-Components?
+Ans) A Higher-Order Component (HOC) in React is a design pattern where a function takes a component as input and returns a new, enhanced component with added logic, effectively re-using and abstracting shared behavior. This technique promotes code reuse, prevents repetition, and helps in managing cross-cutting concerns like data fetching or authentication by wrapping components in reusable functionality
+
+19) Explain custom hooks?
+Ans) Custom Hooks in React are JavaScript functions that allow for the extraction and reuse of stateful logic from components. They enable developers to encapsulate and share logic that uses React's built-in Hooks (like useState, useEffect, useContext, etc.) across multiple components without duplicating code or altering the component hierarchy.
+
+20) What is negative infinity?
+Ans) Negative infinity is a concept representing a value that is infinitely small, or less than any real number. It's the opposite of positive infinity, and both are used in mathematics, particularly in calculus, to describe the behavior of functions or sequences that grow or shrink without bound. 
+
+21) What is lexical scope in JavaScript?
+Ans) Lexical scope in JavaScript, also known as static scope, determines the accessibility of variables based on where they are declared in the source code. This means that the scope of a variable is fixed at the time of writing the code and does not change during runtime.
+
+22) What are "truthy" and "falsy" values in JavaScript
+
+Ans) Falsy Values:
+	Falsy values are those that are considered false when evaluated in a Boolean context. There is a specific, limited list of falsy values in JavaScript:
+	false (the Boolean primitive)
+		0 (the number zero)
+		-0 (negative zero)
+		0n (BigInt zero)
+		"" (an empty string)
+		null
+		undefined
+		NaN (Not-a-Number)
+		document.all (a legacy, non-standard property that is falsy in some browsers)
+
+     Truthy Values:
+	Truthy values are all values that are not falsy. When evaluated in a Boolean context, they are considered true. This includes:
+		true (the Boolean primitive)
+		Any non-zero number (e.g., 42, -10, 3.14)
+		Any non-empty string (e.g., "hello", "false", "0")
+		Objects (e.g., {}, [], new Date())
+		Arrays (even empty ones, e.g., [])
+		Functions
+
+23) What is the difference between null and undefined in JavaScript?
+Ans) undefined:
+	Indicates that a variable has been declared but has not yet been assigned a value. 
+	Is automatically assigned to variables that are declared without an initial value.
+	Is the default return value for functions that do not explicitly return anything.
+	Is returned when accessing a non-existent property of an object. 
+	The typeof operator returns "undefined" for undefined values.
+
+     null:
+	Represents the intentional absence of any object value.
+	Must be explicitly assigned to a variable to indicate that it currently holds no value.
+	Is often used to explicitly clear the value of a variable or to signify that an object is not present.
+	The typeof operator returns "object" for null values, which is a historical quirk in JavaScript.
+
+24) What is an event bubbling in JavaScript?
+Ans) Event bubbling in JavaScript is a mechanism in the Document Object Model (DOM) where an event, triggered on a specific element, propagates upwards through its ancestor elements in the DOM hierarchy. When an event occurs on an element (the "target element"), the event handler for that element is executed first. Subsequently, the event "bubbles up" to the parent of the target element, then to its parent, and so on, until it reaches the document object or the root of the DOM tree. 
+
+
+=> React:
+
+1) What are the main features of React?
+Ans) The main features of React that contribute to its popularity and effectiveness in building user interfaces are:
+
+	Virtual DOM:
+	React creates a lightweight, in-memory representation of the actual DOM, known as the Virtual DOM. When state changes, React first updates the Virtual DOM and 	then efficiently calculates the minimal changes required to update the real DOM, leading to faster rendering and improved performance.
+
+	Component-Based Architecture:
+	React applications are built using reusable, self-contained components. Each component manages its own state and renders a specific part of the UI. This 	modular approach promotes code reusability, maintainability, and easier development of complex user interfaces.
+
+	JSX (JavaScript XML):
+	JSX is a syntax extension for JavaScript that allows developers to write HTML-like code directly within JavaScript. This combines the declarative nature of 	HTML with the power of JavaScript, making it more intuitive to define UI elements and their logic within the same file.
+
+	One-Way Data Binding:
+	React implements a unidirectional data flow, meaning data flows in a single direction (from parent components to child components). This predictable data flow 	makes it easier to understand how data changes affect the UI and simplifies debugging.
+
+	Declarative UI:
+	React focuses on a declarative approach to UI development. Instead of explicitly manipulating the DOM, developers describe the desired state of the UI, and 	React handles the efficient updates to achieve that state. This makes the code more readable and easier to reason about. 
+
+	React Native:
+	While primarily for web development, React's concepts extend to mobile app development through React Native. This allows developers to build native mobile 	applications for iOS and Android using the same declarative, component-based approach and often sharing a significant portion of the codebase.
+
+2) Difference between functional and class components.
+Ans) Functional Components: 
+	Defined as plain JavaScript functions that accept props as an argument and return JSX.
+	Utilize React Hooks, specifically useState, to manage component-specific state.
+	Handle side effects and lifecycle-like behavior using the useEffect Hook.
+	Generally considered simpler, more concise, and often lead to more readable code, especially with the introduction of Hooks.
+
+     Class Components:
+	Defined as JavaScript classes that extend React.Component and require a render() method to return JSX.
+	Manage state within a this.state object and update it using this.setState().
+	Utilize specific lifecycle methods like componentDidMount(), componentDidUpdate(), and componentWillUnmount() for managing side effects at different stages of 	the component's life.
+	Can be more verbose and complex, particularly for managing state and lifecycle logic.
+
+3) What are props and state in React?
+Ans) Props are a mechanism for passing data from a parent component to a child component. They are read-only, meaning a child component cannot directly modify the props it receives from its parent. Whereas State is an internal data store managed within a component itself. Unlike props, state is mutable and can be changed over time, usually in response to user interactions or other events.
+
+4) Explain the concept of virtual DOM in React.
+Ans) React creates a VIRTUAL DOM in memory. Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM. React only changes what needs to be changed!
+
+5) Difference between controlled and uncontrolled components.
+Ans) Controlled components' values are managed by their React component's state, providing a single source of truth and enabling complex validation and data synchronization. Uncontrolled components manage their own state internally and use refs to access values from the DOM, which simplifies implementation for basic use cases but offers less control. The choice depends on whether you need tight control and data consistency (controlled) or simplicity and direct DOM interaction (uncontrolled).
+
+6) What are React hooks?.
+Ans) React Hooks are functions introduced in React 16.8 that allow developers to "hook into" React features like state and lifecycle methods directly within functional components. Before hooks, these features were primarily available only in class components.
+
+
+7) What is context API in React? How is it different from Redux?
+Ans) The React Context API is a feature that allows data to be passed through the component tree without manually passing props down at every level. It provides a way to share "global" data, such as themes, user authentication status, or language settings, to a subtree of components. 
+
+				The Context API is a simpler, built-in feature of React and requires less boilerplate code compared to Redux. Redux, being a separate library, introduces concepts like actions, reducers, and a centralized store, which can add complexity, especially for smaller applications.
+
+				While Context API can be convenient, frequent updates to a context provider can cause re-renders of all consuming components, potentially leading to performance issues if not managed carefully. Redux, with its optimized re-rendering mechanisms and ability to use selectors, often offers better performance control for highly dynamic states.
+
+8) Explain the concept of React Router for navigation.
+Ans) React Router is a widely used library in React applications that provides routing capabilities, enabling navigation between different views or components within a Single Page Application (SPA). Instead of full page reloads, React Router dynamically updates the UI based on the URL, creating a seamless user experience.
+The core concept revolves around defining "routes" that map specific URL paths to corresponding React components. When the URL matches a defined route, React Router renders the associated component.
+
+9) How do you optimize performance in a React application?
+Ans) Optimizing performance in a React application involves several techniques aimed at reducing unnecessary re-renders, improving initial load times, and making the application more responsive.
+
+	React.memo:
+		Memoizes functional components to prevent re-renders if their props haven't changed.
+
+	useMemo:
+		Memoizes the result of a function call, re-computing only when its dependencies change.
+
+	useCallback:
+		Memoizes a function instance, preventing its re-creation on every render if its dependencies are stable.
+
+	React.lazy and Suspense:
+		Allows for lazy loading components, so they are only fetched and rendered when needed, reducing the initial bundle size.
+
+	Debouncing and Throttling: Limit the frequency of expensive event handlers (e.g., scroll, resize, input) to prevent performance bottlenecks.
+
+10) Explain the difference between memo, useMemo, and useCallback.
+Ans)   React.memo:
+ 		Memoizes functional components to prevent re-renders if their props haven't changed.
+
+ 	useMemo:
+ 		Memoizes the result of a function call, re-computing only when its dependencies change.
+
+ 	useCallback:
+ 		Memoizes a function instance, preventing its re-creation on every render if its dependencies are stable.
+
+
+11) What is React StrictMode?
+Ans) React StrictMode is a development-only tool in React that helps identify potential problems and ensure best practices within a React application. It does not render any visible UI and has no impact on the production build. 
+
+12) Explain the concept of prop drilling and lifting the state up?
+Ans) Prop drilling, also known as "threading," is a pattern in component-based architectures where data is passed down from a higher-level component to a deeply nested child component through multiple intermediate components that do not directly use the data themselves. This creates a long chain of props being passed down the component tree. 
+			Lifting state up is a technique used to share state between sibling components or to manage state that needs to be accessed by multiple components in different branches of the component tree. Instead of each component managing its own local state, the shared state is moved to their closest common ancestor. The ancestor then passes down the state as props to its children, and often, also passes down callback functions to allow children to update the state in the parent.
+
+13) Why does the class components have lower preference than functional components?
+Ans) Class components are less preferred than functional components due to React Hooks, which provide a simpler, more concise way to manage state and lifecycle logic in functional components, eliminating the need for verbose classes. Functional components offer greater code readability, improved performance, and better integration with modern React features like concurrent rendering and Suspense. Additionally, the React ecosystem and community have shifted towards a Hooks-first approach, with new documentation and libraries focusing on functional components.
+
+14) What are lifecycle methods available in react?
+Ans) React class components utilize lifecycle methods, which are special methods invoked by React at specific stages of a component's existence. These methods allow developers to perform actions at different points in a component's lifecycle, such as initialization, rendering, updating, and cleanup.
+
+	Three main phases are:
+
+	Mounting:
+		This phase occurs when a component is being created and inserted into the DOM. 
+
+	Updating:
+		This phase occurs when a component's props or state change, leading to a re-render.
+
+	Unmounting:
+		This phase occurs when a component is being removed from the DOM. 
+
+
+15) Difference between filter and find?
+Ans) find() : 
+	This method is used to retrieve the first element in an array that satisfies a given condition. It stops iterating through the array once the first matching 	element is found. If no element satisfies the condition, find typically returns undefined (or a similar "not found" indicator depending on the language).
+
+     filter():
+	This method is used to create a new array containing all elements from the original array that satisfy a given condition. It iterates through the entire array 	and includes every element that passes the test in the new array. If no elements satisfy the condition, filter returns an empty array.
+
+
+=> Redux:
+
+1) What is Redux? Why do we use it?
+Ans) Redux is a predictable state container for JavaScript applications. It is a standalone library that can be used with any UI framework or library, though it is most commonly associated with React. Redux centralizes the application's global state in a single, immutable store.
+
+					Redux provides a single source of truth for the entire application's state, making it easier to manage and track data flow, especially in large and complex applications.State changes in Redux are made through pure functions called "reducers". Tools like the Redux DevTools allow for "time-travel debugging," where you can replay actions and inspect the state at different points in time. Redux simplifies communication between components, particularly deeply nested ones, by eliminating the need for "prop drilling" (passing props down through multiple layers of components). By providing a structured and organized way to manage state, Redux helps in building scalable and maintainable applications, as the state logic is separated from the UI components.
+
+2) Explain the three principles of Redux.
+Ans)Redux operates on three core principles that guide how application state is managed:
+
+	Single Source of Truth:
+		The entire state of your application is stored in a single JavaScript object tree within a single store. This means there's one central location for 		all your application's data, making it easier to manage, debug, and understand how data flows through your application. 
+
+	State is Read-Only:
+		The state cannot be directly modified. To change the state, you must dispatch an action, which is a plain JavaScript object describing what happened 		(eg., a button click, data fetched from an API). This principle ensures that state changes are predictable and traceable, as all modifications are 		explicitly initiated through actions.
+
+	Changes are Made with Pure Functions (Reducers):
+		To specify how the state tree is transformed by actions, you write reducers. Reducers are pure functions that take the previous state and an action as 		arguments, and then return a new state object. They must not mutate the original state directly but instead return a new state object with the 			necessary changes. This immutability ensures predictable state updates and facilitates features like time-travel debugging
+
+3) Difference between Redux and Context API.
+Ans) Context API is for sharing data across a component sub-tree, while Redux is for managing the global state of an entire application.  Context API is simpler and requires less boilerplate; Redux is more complex but offers greater control and features for large applications. Redux provides a complete ecosystem for state management (middleware, dev tools), while Context API is a more basic mechanism for data propagation. Context API can have performance issues with frequently updated or complex state without careful optimization; Redux is designed for optimized performance in large-scale applications. In essence, the Context API is suitable for simpler state management needs or for passing data that changes infrequently, while Redux is the preferred choice for complex applications with intricate state logic and a need for centralized, predictable state management. 
+
+4) What are actions and reducers in Redux?
+Ans) Actions:
+	Actions are plain JavaScript objects that describe "what happened" in the application. They are the only way to send data from your application to the Redux 	store.
+	Every action must have a type property, which is a string constant that describes the type of action being performed (e.g., 'ADD_TODO', 'USER_LOGIN').
+	Actions can optionally contain a payload or other fields that carry data relevant to the action, such as the new todo item or user credentials.
+	Actions are "dispatched" to the Redux store, signaling that a state change is intended.
+
+     Reducers:
+	Reducers are pure JavaScript functions that take the current state and an action as arguments, and return a new state based on the action's type.
+	They are responsible for updating the application's state in response to dispatched actions.
+	Reducers must be pure functions, meaning they should not have any side effects (e.g., making API calls, modifying the DOM) and should always return the same 	output for the same input.
+	Reducers achieve immutability by returning a new state object instead of directly modifying the existing state. This is crucial for predictable state 	management and features like time-travel debugging.
+	Typically, a switch statement is used within a reducer to handle different action types and apply the corresponding state updates. 
+
+5) Explain the concept of Redux store.
+Ans)The Redux store serves as the single, centralized source of truth for the entire application's global state. It is a JavaScript object that encapsulates the application's state and provides methods for interacting with it. A Redux application maintains only one store, ensuring that all parts of the application access and update the same state, promoting consistency and predictability.The store holds the complete state tree of the application. Components can access this state to render their respective UI elements.The state within the Redux store is immutable. Direct modification of the state is not permitted.When creating a Redux store, a root reducer function must be provided. This reducer is responsible for determining how the application's state changes in response to dispatched actions.
+
+6) How do you connect Redux with a React app using react-redux?
+Ans) Connecting Redux with a React application using react-redux involves several key steps: Install necessary packages.
+Install redux, @reduxjs/toolkit (recommended for modern Redux development), and react-redux.
+
+7) Explain middleware in Redux with an example.
+Ans) Middleware in Redux provides a third-party extension point between dispatching an action and the moment it reaches the reducer. It allows for intercepting actions and performing side effects, such as logging, crash reporting, or handling asynchronous operations like API calls, before the action is passed on to the reducer. 
+
+Eg: Logging Middleware : A common use case for middleware is logging dispatched actions and the resulting state changes.
+
+8) What is Redux Thunk, and why is it used?
+Ans) Redux Thunk is a Redux middleware that enables asynchronous actions in your Redux store, allowing action creators to return functions instead of just plain objects. It's used to handle tasks like fetching data from an API, which often involves delayed operations. Thunk intercepts these functions (called "thunks"), executes them, and then dispatches regular actions to the store with the fetched data or based on the outcome of the asynchronous task. 
+
+						Redux, by default, works synchronously. Redux Thunk provides a way to bridge this by allowing you to write functions that can perform asynchronous tasks, like making network requests to an API. You can perform side effects, such as API calls, within your actions, making them more powerful and flexible for managing complex applications. By using Thunk, you can manage asynchronous operations and side effects in a centralized way. It helps decouple your components from the asynchronous logic, making your codebase easier to manage and scale. 
+
+9) Difference between Redux Toolkit and traditional Redux.
+Ans) Traditional Redux: 
+	Requires manual creation of action types, action creators, and reducers, often leading to repetitive and verbose code.
+	Requires manual immutable updates to state using techniques like spread operators or Object.assign().
+	Requires manual configuration of the store, including combining reducers, applying middleware, and setting up enhancers.
+	Often requires integrating separate middleware like Redux Thunk or Redux Saga for handling asynchronous operations.
+
+     Redux Toolkit: 
+	Significantly reduces boilerplate with utilities like createSlice, which automatically generates action types, action creators, and a reducer for a given 	"slice" of state.
+	Uses the Immer library internally, allowing developers to write "mutating" logic within reducers, which Immer then translates into immutable updates behind 	the scenes.
+	Provides configureStore, a simplified function that handles common store setup tasks, including combining reducers, adding Redux DevTools support, and applying 	default middleware like Redux Thunk.
+	Includes createAsyncThunk, a built-in utility for handling asynchronous actions and managing their pending, fulfilled, and rejected states, reducing the need 	for external middleware in many cases.
+	
+
+10) How do you handle async operations in Redux?
+Ans) Redux handles asynchronous operations primarily through the use of middleware. Since Redux actions are typically dispatched synchronously, middleware provides a way to intercept actions and perform side effects, such as API calls or delayed dispatches, before the action reaches the reducer.
+
+11) Explain the concept of selectors in Redux.
+Ans) In Redux, selectors are functions responsible for extracting specific pieces of data from the Redux store's state. They act as an abstraction layer between the raw state and the components that consume that state.
+
+12) How does Redux DevTools help in debugging?
+Ans) Redux DevTools significantly aids in debugging Redux applications by providing a comprehensive interface to inspect and manipulate the application's state and action flow.
+
